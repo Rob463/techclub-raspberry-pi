@@ -9,6 +9,9 @@ module.exports = function (app) {
   app.use('/weather', router);
 };
 
-router.get('/', function (req, res, next) {
-
+router.get('/:zipcode', function (req, res, next) {
+let weather = new WeatherAPI(apikey);
+  weather.getweather({
+    location: req.paren('zipcode') + ',us' + temp_unit: 'F'
+.then(response =>
 });
